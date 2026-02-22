@@ -4,12 +4,12 @@
 library(tidyverse)
 library(cfbfastR)
 library(hoopR)
-library(ggimage)
+library(dotenv)
 
 # Set API Keys ------------------------------------------------------------
 
-Sys.setenv(CFBD_API_KEY = "31hEcM+6QKhR6WCAhWcG5yENwqvSy9/MSQbckTl6hZznLy9nIon5vG99ZrnPw4/s")
-
+load_dot_env()
+Sys.setenv(CFBD_API_KEY = Sys.getenv("API_KEY"))
 
 # CFB ---------------------------------------------------------------------
 
